@@ -437,6 +437,20 @@
             max-width: min(40rem, 100%);
         }
 
+        .contact-cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-4);
+            align-items: stretch;
+            align-self: stretch;
+        }
+
+        .contact-cta-row .contact-link--primary {
+            flex: 1 1 auto;
+            min-width: min(100%, 12.5rem);
+            justify-content: center;
+        }
+
         .contact-row {
             display: flex;
             flex-wrap: wrap;
@@ -1473,7 +1487,10 @@
                 <p class="subtitle hero-line" style="--hero-order: 1">Software engineer · PHP, WordPress, Flutter</p>
             </div>
             <div class="contact-links hero-line" style="--hero-order: 2">
-                <a class="contact-link--primary" href="mailto:hesmammohammed@gmail.com"><i class="devicon-google-plain" aria-hidden="true"></i> hesmammohammed@gmail.com</a>
+                <div class="contact-cta-row">
+                    <a class="contact-link--primary" href="mailto:hesmammohammed@gmail.com"><i class="devicon-google-plain" aria-hidden="true"></i> hesmammohammed@gmail.com</a>
+                    <a class="contact-link--primary" href="mohamed%20hesham.pdf" download="Mohamed-Hesham-Soliman-CV.pdf" aria-label="Download CV as PDF">Download CV</a>
+                </div>
                 <div class="contact-row">
                     <a href="tel:+201282304755" aria-label="Phone, +20 128 230 4755">+20&nbsp;128&nbsp;230&nbsp;4755</a>
                     <a href="https://github.com/MOHAMEDHESMAM8" target="_blank" rel="noopener noreferrer"><i class="devicon-github-original" aria-hidden="true"></i> GitHub</a>
