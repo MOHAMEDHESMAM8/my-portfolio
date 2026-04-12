@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohamed Hesham Soliman — CV</title>
+<style>
+  @font-face {
+    font-family: 'Space Grotesk';
+    src: url('./fonts/space-grotesk-latin.woff2') format('woff2');
+    font-weight: 300 700;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  @font-face {
+    font-family: 'Space Grotesk';
+    src: url('./fonts/space-grotesk-latin-ext.woff2') format('woff2');
+    font-weight: 300 700;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+
+  @font-face {
+    font-family: 'DM Sans';
+    src: url('./fonts/dm-sans-latin.woff2') format('woff2');
+    font-weight: 100 1000;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  @font-face {
+    font-family: 'DM Sans';
+    src: url('./fonts/dm-sans-latin-ext.woff2') format('woff2');
+    font-weight: 100 1000;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #1a1a2e;
+    background: #ffffff;
+    padding: 0;
+    margin: 0;
+  }
+
+  .page {
+    width: 100%;
+    max-width: 210mm;
+    margin: 0 auto;
+    padding: 2px 0;
+  }
+
+  /* === HEADER === */
+  .header {
+    margin-bottom: 20px;
+  }
+
+  .header h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a2e;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+    line-height: 1.1;
+  }
+
+  .header-gradient {
+    height: 2px;
+    background: linear-gradient(to right, hsl(187, 74%, 32%), hsl(270, 70%, 45%));
+    border-radius: 1px;
+    margin-bottom: 10px;
+  }
+
+  .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10.5px;
+    line-height: 1.4;
+    color: #555;
+  }
+
+  .contact-row a {
+    color: #555;
+    text-decoration: none;
+  }
+
+  .contact-row .separator {
+    color: #ccc;
+  }
+
+  /* === SECTIONS === */
+  .section {
+    margin-bottom: 18px;
+  }
+
+  .section-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: hsl(187, 74%, 32%);
+    border-bottom: 1.5px solid #e2e2e2;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  /* === PROFESSIONAL SUMMARY === */
+  .summary-text {
+    font-size: 11px;
+    line-height: 1.7;
+    color: #2f2f2f;
+  }
+
+  /* Links must never break across lines */
+  a {
+    white-space: nowrap;
+  }
+
+  /* === CORE COMPETENCIES === */
+  .competencies-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .competency-tag {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    color: hsl(187, 74%, 28%);
+    background: hsl(187, 40%, 95%);
+    padding: 4px 10px;
+    border-radius: 3px;
+    border: 1px solid hsl(187, 40%, 88%);
+  }
+
+  /* === WORK EXPERIENCE === */
+  .job {
+    margin-bottom: 14px;
+  }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 4px;
+  }
+
+  .job-company {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: hsl(270, 70%, 45%);
+  }
+
+  .job-period {
+    font-size: 10.5px;
+    color: #777;
+    white-space: nowrap;
+  }
+
+  .job-role {
+    font-size: 11px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+  }
+
+  .job-location {
+    font-size: 10px;
+    color: #888;
+  }
+
+  .job ul {
+    padding-left: 18px;
+    margin-top: 6px;
+  }
+
+  .job li {
+    font-size: 10.5px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 4px;
+  }
+
+  .job li strong {
+    font-weight: 600;
+  }
+
+  /* === PROJECTS === */
+  .project {
+    margin-bottom: 12px;
+  }
+
+  .project-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11.5px;
+    font-weight: 600;
+    color: hsl(270, 70%, 45%);
+  }
+
+  .project-badge {
+    font-size: 9px;
+    font-weight: 500;
+    color: hsl(187, 74%, 32%);
+    background: hsl(187, 40%, 95%);
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-left: 6px;
+  }
+
+  .project-desc {
+    font-size: 10.5px;
+    color: #444;
+    margin-top: 3px;
+    line-height: 1.55;
+  }
+
+  .project-tech {
+    font-size: 9.5px;
+    color: #888;
+    margin-top: 3px;
+  }
+
+  /* === EDUCATION === */
+  .edu-item {
+    margin-bottom: 8px;
+  }
+
+  .edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .edu-title {
+    font-weight: 600;
+    font-size: 11px;
+    color: #333;
+  }
+
+  .edu-org {
+    color: hsl(270, 70%, 45%);
+    font-weight: 500;
+  }
+
+  .edu-year {
+    font-size: 10px;
+    color: #777;
+    white-space: nowrap;
+  }
+
+  .edu-desc {
+    font-size: 10px;
+    color: #666;
+    margin-top: 2px;
+    line-height: 1.5;
+  }
+
+  /* === CERTIFICATIONS === */
+  .cert-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 6px;
+  }
+
+  .cert-title {
+    font-size: 10.5px;
+    font-weight: 500;
+    color: #333;
+  }
+
+  .cert-org {
+    color: hsl(270, 70%, 45%);
+  }
+
+  .cert-year {
+    font-size: 10px;
+    color: #777;
+    white-space: nowrap;
+  }
+
+  /* === SKILLS === */
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+  }
+
+  .skill-item {
+    font-size: 10.5px;
+    color: #444;
+  }
+
+  .skill-category {
+    font-weight: 600;
+    color: #333;
+    font-size: 10.5px;
+  }
+
+  /* === PRINT === */
+  @media print {
+    body {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      padding: 0;
+    }
+  }
+
+  /* === PAGE BREAK CONTROL === */
+  .avoid-break,
+  .job,
+  .project,
+  .edu-item,
+  .cert-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header avoid-break">
+    <h1>Mohamed Hesham Soliman</h1>
+    <div class="header-gradient"></div>
+    <div class="contact-row">
+      <span>hesmammohammed@gmail.com</span>
+      <span class="separator">|</span>
+      <span>+20 128 230 4755</span>
+      <span class="separator">|</span>
+      <a href="https://linkedin.com/in/mohammedhesham888">linkedin.com/in/mohammedhesham888</a>
+      <span class="separator">|</span>
+      <a href="https://github.com/MOHAMEDHESMAM8">github.com/MOHAMEDHESMAM8</a>
+      <span class="separator">|</span>
+      <span>Based in Egypt, open to relocation</span>
+    </div>
+  </div>
+
+  <!-- PROFESSIONAL SUMMARY -->
+  <div class="section avoid-break">
+    <div class="section-title">Professional Summary</div>
+    <div class="summary-text">Four years building production backends in PHP and WordPress (custom plugins, themes, and integrations) and shipping Flutter apps with clean architecture, reliable performance, and maintainable code for real users.</div>
+  </div>
+
+  <!-- CORE COMPETENCIES -->
+  <div class="section">
+    <div class="section-title">Core Competencies</div>
+    <div class="competencies-grid">
+      <span class="competency-tag">PHP Backend Development</span>
+      <span class="competency-tag">WordPress Plugins & Themes</span>
+      <span class="competency-tag">Flutter Mobile Apps</span>
+      <span class="competency-tag">REST API Design</span>
+      <span class="competency-tag">State Management (Riverpod/BLoC)</span>
+      <span class="competency-tag">CI/CD Pipelines</span>
+      <span class="competency-tag">E-commerce Platforms</span>
+      <span class="competency-tag">Performance Optimization</span>
+      <span class="competency-tag">Database Design</span>
+      <span class="competency-tag">Clean Architecture / MVVM</span>
+    </div>
+  </div>
+
+  <!-- WORK EXPERIENCE -->
+  <div class="section">
+    <div class="section-title">Work Experience</div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-company">IIS E-SOLUTIONS</div>
+        <div class="job-period">Apr 2025 - Present</div>
+      </div>
+      <div class="job-role">PHP Backend & Flutter Developer</div>
+      <ul>
+        <li>Developed <strong>OBA Health Club</strong>, a WordPress healthcare platform with e-commerce, memberships, video consultations, surveys, and warehouse management.</li>
+        <li>Integrated medical APIs, In-App Purchases, and Google/Apple authentication to streamline onboarding and transactions.</li>
+        <li>Implemented Riverpod and CI/CD workflows for stable and repeatable mobile/web releases.</li>
+        <li>Engineered and extended custom WordPress plugins and delivered multiple end-to-end e-commerce projects, including multi-vendor and auction systems.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-company">Shahbandr</div>
+        <div class="job-period">Jan 2025 - Apr 2025</div>
+      </div>
+      <div class="job-role">PHP Developer</div>
+      <ul>
+        <li>Engineered the main dashboard to improve performance and user experience.</li>
+        <li>Integrated modern payment gateways for secure, seamless transactions.</li>
+        <li>Implemented live customer chat to improve support responsiveness and engagement.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-company">Resala Charity</div>
+        <div class="job-period">May 2024 - Present</div>
+      </div>
+      <div class="job-role">Flutter Developer</div>
+      <ul>
+        <li>Built a volunteer management app supporting 2,000 users and 10M+ transactions.</li>
+        <li>Integrated external APIs and improved app performance, increasing retention by 40%.</li>
+        <li>Implemented role/permission systems and reporting workflows, improving operational efficiency.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-company">ThemesCamp</div>
+        <div class="job-period">Feb 2023 - Dec 2024</div>
+      </div>
+      <div class="job-role">PHP Backend Developer</div>
+      <ul>
+        <li>Developed and maintained custom WordPress plugins for 1,000+ client sites.</li>
+        <li>Resolved technical issues 30% faster, improving customer satisfaction and support throughput.</li>
+        <li>Optimized backend code to reduce page load times by 25% across multiple projects.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="section avoid-break">
+    <div class="section-title">Projects</div>
+
+    <div class="project">
+      <div class="project-title">OBA Health Club <span class="project-badge">Featured</span></div>
+      <div class="project-desc">Healthcare platform on WordPress with e-commerce, memberships, video visits, surveys, and warehouse flows. Includes a companion Flutter app with IAP, push notifications, and secure sign-in.</div>
+      <div class="project-tech">Tech: WordPress, PHP, Flutter | Links: <a href="https://obahealthclub.com/">Live</a>, <a href="https://play.google.com/store/apps/details?id=com.obahealthclub.app">Android</a>, <a href="https://apps.apple.com/us/app/oba-health-club/id6749311743">iOS</a></div>
+    </div>
+
+    <div class="project">
+      <div class="project-title">Shahbandr</div>
+      <div class="project-desc">Enhanced dashboard performance and UX, integrated payment gateways, and added live customer chat.</div>
+      <div class="project-tech">Tech: PHP | Link: <a href="https://shahbandr.com/">Live</a></div>
+    </div>
+
+    <div class="project">
+      <div class="project-title">Swak Plugin</div>
+      <div class="project-desc">WordPress plugin enabling drag-and-drop layout customization without code changes.</div>
+      <div class="project-tech">Tech: WordPress | Link: <a href="https://preview.themeforest.net/item/swak-agency-portfolio-showcase-wordpress-theme/full_screen_preview/48654833?aca=websitepurchase&aid=themescamp&aso=48654833">Preview</a></div>
+    </div>
+
+    <div class="project">
+      <div class="project-title">Capstone: Solar Efficiency</div>
+      <div class="project-desc">Machine learning model to forecast power usage and optimize solar panel efficiency.</div>
+      <div class="project-tech">Tech: Python / ML | Link: <a href="https://www.facebook.com/100001289642980/videos/790238796019047/">Demo</a></div>
+    </div>
+
+    <div class="project">
+      <div class="project-title">ERP System API</div>
+      <div class="project-desc">Django REST Framework ERP backend for inventory, sales, purchases, HR, suppliers, and appointments.</div>
+      <div class="project-tech">Tech: Django (DRF) | Link: <a href="https://github.com/MOHAMEDHESMAM8/Daftra-API">GitHub</a></div>
+    </div>
+
+    <div class="project">
+      <div class="project-title">E-learning System API</div>
+      <div class="project-desc">Role-based course management API for professors and students with external video hosting integration.</div>
+      <div class="project-tech">Tech: Django (DRF) | Link: <a href="https://github.com/MOHAMEDHESMAM8/Nolaqen-API">GitHub</a></div>
+    </div>
+
+    <div class="project">
+      <div class="project-title">QafAuction</div>
+      <div class="project-desc">Multi-vendor auction platform with real-time bidding, built with WordPress and PHP.</div>
+      <div class="project-tech">Tech: WordPress, PHP | Link: <a href="https://bid.mil.qa/">Live</a></div>
+    </div>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="section avoid-break">
+    <div class="section-title">Education</div>
+
+    <div class="edu-item">
+      <div class="edu-header">
+        <div class="edu-title">Bachelor of Software Engineering / Computer Science - <span class="edu-org">Kafr El Sheikh University</span></div>
+        <div class="edu-year">Sep 2019 - Jun 2023</div>
+      </div>
+      <div class="edu-desc">GPA: 3.0. Capstone focused on ML-based forecasting to improve solar panel output efficiency.</div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-header">
+        <div class="edu-title">Student Life & Volunteerism - <span class="edu-org">Resala Charity Organization</span></div>
+      </div>
+      <div class="edu-desc">Volunteer contributor on community initiatives across Egypt, focusing on coordination and team execution.</div>
+    </div>
+  </div>
+
+  <!-- CERTIFICATIONS -->
+  <div class="section avoid-break">
+    <div class="section-title">Certifications</div>
+
+    <div class="cert-item">
+      <div class="cert-title"><a href="https://drive.google.com/file/d/1kt7AnZMF_mE0gca4dLzPn1cHowgS3YZw/view?usp=sharing">The Ultimate Django Series</a> <span class="cert-org">(Mosh Hamedani)</span></div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-title"><a href="https://drive.google.com/file/d/1MdlgOHiiwd2v-_z7qa9rEQk0Ox7-7Q9Z/view?usp=sharing">ITI - Database</a></div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-title"><a href="https://www.youracclaim.com/badges/54960644-2393-4f8b-97d7-a96917d71152?source=linked_in_profile">CyberOps Associate</a> <span class="cert-org">(Cisco)</span></div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-title"><a href="https://gdsc-cert.web.app/c/SYL7SU0W2T2E">GDSC Core Team Member</a></div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-title"><a href="https://www.appbrewery.com/p/flutter-development-bootcamp-with-dart">Flutter Development Bootcamp with Dart</a></div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-title"><a href="https://www.coursera.org/account/accomplishments/certificate/2E6KCKA8WYQE">Supervised Machine Learning: Regression and Classification</a></div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-title"><a href="https://drive.google.com/file/d/1iD4pH6b9xUxPFHWaezX_KcVVOR7zLk0Q/view">Kickstart your Career in Tech</a> <span class="cert-org">(BambooGeeks)</span></div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-title"><a href="https://programs.edraak.org/learn/verify-certificate/93683bf01ee949a9956d80d7710472bd/?lang=en">Soft Skills Courses</a> <span class="cert-org">(Edraak)</span></div>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section avoid-break">
+    <div class="section-title">Skills</div>
+    <div class="skills-grid">
+      <span class="skill-item"><span class="skill-category">Languages:</span> PHP, Dart, Python, JavaScript, C#, SQL</span>
+      <span class="skill-item"><span class="skill-category">Frameworks:</span> Flutter, Laravel, WordPress, Django REST Framework</span>
+      <span class="skill-item"><span class="skill-category">Mobile:</span> Riverpod, Provider, BLoC/Cubit, Firebase, FCM, In-App Purchases, Deep Linking</span>
+      <span class="skill-item"><span class="skill-category">Architecture:</span> Clean Architecture, MVVM, OOP, REST APIs</span>
+      <span class="skill-item"><span class="skill-category">Tools:</span> Git, GitLab CI/CD, Xcode Cloud, Google Play Console, App Store Connect, Xcode</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
